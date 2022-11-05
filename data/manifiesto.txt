@@ -1,0 +1,3 @@
+La terminal: Leia ha recogido la muestra: Muestra(id=2, porcentajePureza=79, fecha='2022-11-05T16:05:48.979736500') 
+La terminal: Luke ha recogido la muestra: Muestra(id=3, porcentajePureza=68, fecha='2022-11-05T16:05:50.485698400') 
+La terminal: Leia ha recogido la muestra: Muestra(id=5, porcentajePureza=75, fecha='2022-11-05T16:05:53.493984600') 
