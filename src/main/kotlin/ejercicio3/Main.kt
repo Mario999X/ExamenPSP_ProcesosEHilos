@@ -51,8 +51,9 @@ import java.util.concurrent.Executors
 *
 *   Finalmente, terminamos escribiendo el codigo necesario en el main.
 */
-private const val PRODUCCION = 50
+private const val PRODUCCION = 10
 private const val MAX_MUESTRAS = 5
+private const val NUM_HILOS = 4
 
 private fun main(){
     limpiezaTxt()
@@ -65,7 +66,7 @@ private fun main(){
     val terminal1 = Terminal("Luke", servidor, MAX_MUESTRAS)
     val terminal2 = Terminal("Leia", servidor, MAX_MUESTRAS)
 
-    val pool = Executors.newFixedThreadPool(4)
+    val pool = Executors.newFixedThreadPool(NUM_HILOS)
     pool.execute(androide1)
     pool.execute(androide2)
 

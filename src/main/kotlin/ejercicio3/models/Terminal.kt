@@ -24,15 +24,16 @@ class Terminal(
         while (!cerrandoTerminal) {
             val muestra = servidor.get()
             println("La terminal: $nombre ha recogido la muestra: $muestra ")
+            println("------------------------------------------------")
             muestrasTomadas++
 
+            sleep(ms.toLong())
             if (muestra.porcentajePureza > 60) {
 
                 println("-La terminal: $nombre escribiendo en fichero...")
                 file.appendText("La terminal: $nombre ha recogido la muestra: $muestra \n")
 
                 println("\t --Informacion agregada de la terminal: $nombre")
-                sleep(ms.toLong())
 
             } else if (muestrasTomadas == maxMuestras) {
                 println("\t \t -La terminal: $nombre ha llegado a su limite.")

@@ -7,7 +7,7 @@ import kotlin.concurrent.withLock
 import kotlin.system.exitProcess
 
 class Servidor(
-    val maxMuestras: Int = 8
+    private val maxMuestras: Int = 8
 ) : MonitorInterface<Muestra> {
 
     // Lista donde se guardan las muestras
@@ -41,13 +41,14 @@ class Servidor(
             while (listaMuestras.size == maxMuestras) {
                 servidorVacio.await()
             }
-            listaMuestras.add(item)
 
             existAppMuestras++
-            if (existAppMuestras == 15) {
+            if (existAppMuestras == 12) {
                 println("\n ---CERRANDO CONEXION---")
-                exitProcess(15)
+                exitProcess(10)
             }
+
+            listaMuestras.add(item)
 
             permisoEntrada = true
 
